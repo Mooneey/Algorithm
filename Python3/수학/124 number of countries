@@ -1,0 +1,18 @@
+# 프로그래머스 Level 2
+
+def solution(n):
+    answer = ''
+    numbers = ['4', '1', '2']
+    
+    num = n
+    
+    while num>0 :
+        remain = num % 3
+        num = num // 3
+        
+        if remain == 0:
+            num = num - 1
+        
+        answer = numbers[remain] + answer
+    
+    return answer
